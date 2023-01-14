@@ -1,0 +1,25 @@
+@use 'reset';
+@use 'vars' as v;
+
+body {
+  color: v.$color-default;
+  font-family: v.$font-serif;
+  background-color: v.$color-primary;
+}
+
+/* 
+  // or you can import your own font
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+*/
+
+@font-face{
+  font-family: 'Spartan';
+    src: url('https://fonts.googleapis.com/css2?family=Asap&family=Dancing+Script&display=swap');
+}
