@@ -2,14 +2,14 @@ import './style.scss'
 
 import PropTypes from 'prop-types';
 
-function Result({currency}) {
+function Result({currency : {rate, name}}) {
   return (
-    <div className="result">
-      <span>{currency.rate.toFixed(2)}</span>
-      <p>{currency.name}</p>
-    </div>
-
-  );
+  <div className='result'>
+   <span className="result-value">{rate.toFixed(2)}</span>
+  <span className="result-currency">{name}</span>
+  </div>
+  )
+  
 }
 
 Result.propTypes = {

@@ -13,12 +13,12 @@ function Currencies({list}) {
   const currencies = list.map(({name}) => 
   <CurrenciesItem key={name}
                   name={name}
-                    
+
                   />
  );
 
  return (
-  <div className="currencies">
+  <div className="scroller">
     <h2 className="currencies-title">Currencies</h2>
 
     <ul className="currencies-list">
