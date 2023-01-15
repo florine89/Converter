@@ -3,7 +3,7 @@ import Currencies from './Currencies';
 import Header from './Header';
 import Result from './Result';
 import './styles.css';
-
+import currencies from '../../data/currencies';
 
 
 // == Composant
@@ -18,7 +18,9 @@ function App() {
         title="Converter"
         money={1}
       />
-      <Currencies />
+      <Currencies
+      list={currencies}
+       />
       <Result 
       currency={defaultCurrency}
        />
