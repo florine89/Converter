@@ -1,13 +1,23 @@
 import './style.scss'
 
-function Result() {
+import PropTypes from 'prop-types';
+
+function Result({currency}) {
   return (
     <div className="result">
-      <span>1.09</span>
-      <p>United States Dollar</p>
+      <span>{currency.rate.toFixed(2)}</span>
+      <p>{currency.name}</p>
     </div>
 
   );
+}
+
+Result.propTypes = {
+
+  currency : PropTypes.shape ({
+    rate: PropTypes.number.isRequired,
+    name : PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default Result;

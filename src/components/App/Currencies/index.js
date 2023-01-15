@@ -3,18 +3,17 @@
 import Country from './Country';
 import './style.scss'
 
+import PropTypes from 'prop-types';
 
 
-
-function Currencies() {
+function Currencies({name}) {
   return (
     <>
     <div className='country'>
       <p>Currencies</p>
       <ul>
-        <Country />
-        <Country />
-        <Country />
+        
+        
       </ul>
       </div>
     </>

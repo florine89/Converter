@@ -13,7 +13,7 @@ function Header({title, money}) {
    <header>
    <div className= "header-content">
     <h1 className="header-content__title">{title}</h1>
-    <p className="header-content__info">{money}</p>
+    <p className="header-content__info">{money} euro</p>
     </div>
     </header>
     </div>
@@ -23,7 +23,7 @@ function Header({title, money}) {
 
 Header.propTypes = {
 title: PropTypes.string.isRequired,
-money : PropTypes.string.isRequired,
+money : PropTypes.number.isRequired,
 };
 
 export default Header;

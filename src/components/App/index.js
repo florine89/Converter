@@ -8,14 +8,20 @@ import './styles.css';
 
 // == Composant
 function App() {
+  const defaultCurrency = {
+    name: 'United State Dollar',
+    rate: 1.09,
+  }
   return (
     <div className="app">
       <Header 
         title="Converter"
-        money="1 euro"
+        money={1}
       />
       <Currencies />
-      <Result />
+      <Result 
+      currency={defaultCurrency}
+       />
     </div>
   );
 }
