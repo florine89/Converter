@@ -1,0 +1,39 @@
+@use 'src/styles/vars' as v;
+
+/*
+  la hauteur de la liste  est déterminée automatiquement
+  voir le fichier `src/components/Converter/style.scss`
+*/
+.currencies {
+  padding-top: v.$gutter;
+
+  &-title,
+  .currency {
+    border-bottom: 1px solid v.$color-alt;
+    height: v.$list-item-height;
+    line-height: v.$list-item-height;
+    padding: 0 v.$gutter;
+  }
+
+  &-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &-list {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.currency {
+  background-color: v.$color-light;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color v.$delay-slow linear;
+
+  &:hover { // .currency:hover
+    background-color: v.$color-alt;
+    transition: background-color v.$delay-fast linear;
+  }
+}

@@ -1,8 +1,19 @@
-$color-default: #BC5435;
-$color-primary:#F0C5B6 ;
+@use 'sass:color';
 
-$color-lightest: #fff;
+$color: #bb5432;
+// on peut utiliser un module natif de Sass : `sass:color`
+// pour appliquer des modifications sur une couleur
+// ça nous permet de modifier le « thème » automatiquement
+// en ne modifiant que la couleur principale
+// https://sass-lang.com/documentation/modules/color
+$color-alt: color.scale($color, $lightness: 70%);
+$color-light: #fff;
 
-$color-bg: #f2f2f2;
+$font-sans: 'League Spartan', sans-serif;
 
-$font-serif: 'League Spartan', sans-serif;
+$gutter: 1rem;
+$list-item-height: 3rem;
+
+$delay-fast: .2s;
+$delay-slow: 1s;
+
