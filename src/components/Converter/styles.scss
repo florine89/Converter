@@ -11,6 +11,7 @@
   background: v.$color-alt;
   color: v.$color-light;
   display: flex;
+  flex-direction: column;
   font-family: v.$font-sans;
   font-weight: 300;
   height: 100vh;
@@ -30,6 +31,7 @@
   display: flex;
   flex-direction: column;
   height: 90%;
+  margin-bottom: 1rem;
   max-width: 480px;
   width: 90vw;
 }
@@ -45,5 +47,3 @@
   flex-grow: 1;
   overflow-y: auto;
 }
-
-

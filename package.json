@@ -51,6 +51,8 @@
   "dependencies": {
     "prop-types": "*",
     "react": "*",
-    "react-dom": "*"
+    "react-countup": "^6.4.0",
+    "react-dom": "*",
+    "react-icomoon": "^2.5.4"
   }
 }

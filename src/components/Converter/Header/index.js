@@ -3,14 +3,23 @@ import Toggler from '../Toggler';
 
 import './style.scss';
 
-function Header({ baseAmount, isOpen, toggle }) {
+function Header({ baseAmount, isOpen, toggleCurrencies, setAmount }) {
   return (
     <header className="header">
       <h1 className="header-title">Converter</h1>
 
-      <p className="header-amount">{baseAmount} euro</p>
+      <p className="header-amount">
+        <input
+          className="header-amount__input"
+          type="number"
+          min={1}
+          value={baseAmount}
+          onChange={(event) => setAmount(event.target.value)}
+        />
+        euro
+      </p>
 
-      <Toggler isOpen={isOpen} toggle={toggle}/>
+      <Toggler isOpen={isOpen} toggleCurrencies={toggleCurrencies}/>
     </header>
   );
 }
@@ -18,7 +27,8 @@ function Header({ baseAmount, isOpen, toggle }) {
 Header.propTypes = {
   baseAmount: PropTypes.number.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired,
+  toggleCurrencies: PropTypes.func.isRequired,
+  setAmount: PropTypes.func.isRequired,
   
 };
 

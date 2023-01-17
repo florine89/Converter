@@ -1,14 +1,14 @@
 import './style.scss';
 import PropTypes from 'prop-types';
 
-function Toggler({isOpen, toggle}) {
+function Toggler({isOpen, toggleCurrencies}) {
   
     return (
     <div className="toggler">
       <button
         className={isOpen ? 'toggler-btn toggler-btn--open' :'toggler-btn'}
         type="button"
-        onClick={toggle}
+        onClick={toggleCurrencies}
       >
         <span />
         <span />
@@ -20,7 +20,7 @@ function Toggler({isOpen, toggle}) {
 
 Toggler.propTypes = {
   isOpen : PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired,
+  toggleCurrencies: PropTypes.func.isRequired,
  
 };
 export default Toggler;
