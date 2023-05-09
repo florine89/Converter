@@ -25,6 +25,7 @@ $toggler-width-mini: calc($toggler-width / 20);
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
+  cursor: pointer;
   width: $toggler-width;
 
   &-btn {
