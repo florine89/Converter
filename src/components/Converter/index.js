@@ -97,8 +97,6 @@ setAmount = (newAmount) => {
 
 pageTitleEffect() {
   const { currency: { name } } = this.state;
-  // `document.title` n'existe que sur le DOM réel
-  // → on doit donc attendre la réconciliation
   document.title = `Euro to ${name} | Converter`;
 }
 
